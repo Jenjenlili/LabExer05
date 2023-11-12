@@ -22,30 +22,18 @@ namespace LabExer05
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            String LastName = txtLastName.Text;
-            String FirstName = txtFirstName.Text;
-            String MidName = txtMiddleName.Text;
-            String Program = cbPrograms.Text;
-            String Gender = cbGender.Text;
-            String Birthday = dateBirthdayPicker.Value.ToString("yyyy-MM-dd");
-            int StudNum = Convert.ToInt32(txtStudNum.Text);
-            int Age = Convert.ToInt32(txtAge.Text);
-            int ContactNum = Convert.ToInt32(txtContactNum.Text);
-
-            String lblFullName = "Full Name";
-
             string[] registrationContent =
             {
-                lblStudNum.Text.ToString() + ": " + StudNum,
-                lblFullName + ": " + LastName + ", " + FirstName + " " + MidName,
-                lblProgram.Text.ToString() + ": " + Program,
-                lblGender.Text.ToString() + ": " + Gender,
-                lblAge.Text.ToString() + ": " + Age,
-                lblBirthday.Text.ToString() + ": " + Birthday,
-                lblContactNum.Text.ToString() + ": " + ContactNum,
+                lblStudNum.Text.ToString() + ": " + txtStudNum.Text,
+                "Fullname: " + txtLastName.Text + ", " + txtFirstName.Text + " " + txtMiddleName.Text,
+                lblProgram.Text.ToString() + ": " + cbPrograms.Text,
+                lblGender.Text.ToString() + ": " +  cbGender.Text,
+                lblAge.Text.ToString() + ": " + txtAge.Text,
+                lblBirthday.Text.ToString() + ": " + dateBirthdayPicker.Value.ToString("yyyy-MM-dd"),
+                lblContactNum.Text.ToString() + ": " + txtContactNum.Text
             };
 
-            FileName = StudNum + ".txt";
+            FileName = txtStudNum.Text + ".txt";
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
             using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, FileName)))
@@ -96,6 +84,16 @@ namespace LabExer05
                 cbGender.Items.Add(Gender[i].ToString());
             }
 
+        }
+
+        private void btnRecords_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FrmStudentRecord frmStudentRecord = new FrmStudentRecord();
+            frmStudentRecord.ShowDialog();
+
+            Close();
         }
     }
 }

@@ -48,6 +48,7 @@
             this.cbPrograms = new System.Windows.Forms.ComboBox();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.btnRegister = new System.Windows.Forms.Button();
+            this.btnRecords = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -237,12 +238,25 @@
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
+            // btnRecords
+            // 
+            this.btnRecords.BackColor = System.Drawing.Color.LightGray;
+            this.btnRecords.Font = new System.Drawing.Font("Bell MT", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecords.Location = new System.Drawing.Point(735, 332);
+            this.btnRecords.Name = "btnRecords";
+            this.btnRecords.Size = new System.Drawing.Size(145, 44);
+            this.btnRecords.TabIndex = 22;
+            this.btnRecords.Text = "Records";
+            this.btnRecords.UseVisualStyleBackColor = false;
+            this.btnRecords.Click += new System.EventHandler(this.btnRecords_Click);
+            // 
             // FrmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(892, 419);
+            this.Controls.Add(this.btnRecords);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.cbGender);
             this.Controls.Add(this.cbPrograms);
@@ -293,5 +307,6 @@
         private System.Windows.Forms.ComboBox cbPrograms;
         private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Button btnRecords;
     }
 }

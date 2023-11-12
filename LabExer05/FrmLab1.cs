@@ -32,14 +32,13 @@ namespace LabExer05
                 outputFile.WriteLine(getInput);
                 Console.WriteLine(getInput);
             }
-            
+           
             this.Hide();
 
-            FrmRegistration registration = new FrmRegistration();
-            registration.ShowDialog();
+            FrmRegistration frmRegistration = new FrmRegistration();
+            frmRegistration.ShowDialog();
 
             this.Close();
-
         }
     }
 }
