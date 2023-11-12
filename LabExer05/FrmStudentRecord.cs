@@ -22,16 +22,15 @@ namespace LabExer05
         {
             this.Hide();
            
-                FrmRegistration frmRegistration = new FrmRegistration();
-                frmRegistration.ShowDialog();
- 
+            FrmRegistration frmRegistration = new FrmRegistration();
+            frmRegistration.ShowDialog();
 
             Close();
         }
 
         private void btnFind_Click(object sender, EventArgs e)
         {
-            openFileDialog1.InitialDirectory = @"C:\";
+            openFileDialog1.InitialDirectory = @"MyDocuments";
             openFileDialog1.Title = "Browse Text Files";
             openFileDialog1.DefaultExt = "txt";
             openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
