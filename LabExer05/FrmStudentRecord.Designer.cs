@@ -42,9 +42,9 @@
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(29, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 35);
+            this.label1.Size = new System.Drawing.Size(190, 35);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Registration";
+            this.label1.Text = "View Records";
             // 
             // lvShowText
             // 
